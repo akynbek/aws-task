@@ -1,5 +1,5 @@
 terraform {
-  required_version = "0.13.0"
+  required_version = "0.11.14"
 
   backend "s3" {
     bucket = "terraform-state-akon"
