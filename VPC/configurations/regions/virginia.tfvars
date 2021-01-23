@@ -3,10 +3,10 @@ region              =   "us-east-1"
 # Below code is used to set backend only
 environment                     =   "virginia"
 s3_bucket                       =   "terraform-state-akon"
-s3_folder_project               =   "jenkins"
+s3_folder_project               =   "test"
 s3_folder_region                =   "us-east-1"
 s3_folder_type                  =   "tools"
-s3_tfstate_file                 =   "jenkins.tfstate"
+s3_tfstate_file                 =   "test.tfstate"
 
 #depends on network team
 cidr_block          =   "10.0.0.0/16"
