@@ -1,5 +1,5 @@
 data "template_file" "init" {
-  template = "${file("${path.module}/wordpress.sh")}"
+  template = "${file("${path.module}/apache.sh")}"
 }
 
 resource "aws_launch_template" "example" {
