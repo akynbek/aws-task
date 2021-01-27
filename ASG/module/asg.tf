@@ -14,11 +14,9 @@ resource "aws_launch_template" "example" {
 }
 
 resource "aws_autoscaling_group" "example" {
-  availability_zones = [
-    "${var.region}a",
-    "${var.region}b",
-    "${var.region}c",
-  ]
+  vpc_zone_identifier  = ["${aws_subnet.public1.id}", "${aws_subnet.public2.id}"]
+
+
 
   desired_capacity = "${var.desired_capacity}"
 

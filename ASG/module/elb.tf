@@ -2,11 +2,7 @@ resource "aws_elb" "bar" {
   name            = "foobar-terraform-elbs"
   security_groups = ["${aws_security_group.asg-sec-group.id}"]
 
-  availability_zones = [
-    "${var.region}a",
-    "${var.region}b",
-    "${var.region}c",
-  ]
+  subnets = [ "${aws_subnet.public1.id}", "${aws_subnet.public2.id}" ]
 
   listener {
     instance_port = 80
